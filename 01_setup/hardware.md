@@ -1,0 +1,5 @@
+-RPI Zero W
+-CH340 UART Adapter
+-Cheap ass logic analyzer
+-Fedora linux on desktop
+-Rasbian Trixie

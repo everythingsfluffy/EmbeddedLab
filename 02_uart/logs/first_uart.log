@@ -1,0 +1,480 @@
+[fluffy@fedora]~% picocom -b 115200 /dev/ttyUSB0
+picocom v2024-07
+
+port is        : /dev/ttyUSB0
+flowcontrol    : none
+baudrate is    : 115200
+parity is      : none
+databits are   : 8
+stopbits are   : 1
+txdelay is     : 0 ns
+escape is      : C-a
+local echo is  : no
+noinit is      : no
+noreset is     : no
+hangup is      : no
+nolock is      : no
+send_cmd is    : sz -vv
+receive_cmd is : rz -vv -E
+imap is        : 
+omap is        : 
+emap is        : crcrlf,delbs,
+logfile is     : none
+initstring     : none
+exit_after is  : not set
+exit is        : no
+minimal cmds is: no
+
+Type [C-a] [C-h] to see available commands
+Terminal ready
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 6.18.34+rpt-rpi-v6 (serge@raspberrypi.com) (arm-linux-gnueabihf-gcc-14 (Raspbian 14.2.0-19+rpi1) 14.2.0, GNU ld (GNU Binutils for Raspbian) 2.44) #1 Raspbian 1:6.18.34-1+rpt1 (2026-06-09)
+[    0.000000] CPU: ARMv6-compatible processor [410fb767] revision 7 (ARMv7), cr=00c5387d
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT nonaliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Raspberry Pi Zero W Rev 1.1
+[    0.000000] random: crng init done
+[    0.000000] Memory policy: Data cache writeback
+[    0.000000] Reserved memory: created CMA memory pool at 0x0b000000, size 256 MiB
+[    0.000000] OF: reserved mem: initialized node linux,cma, compatible id shared-dma-pool
+[    0.000000] OF: reserved mem: 0x0b000000..0x1affffff (262144 KiB) map reusable linux,cma
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x000000001bffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x000000001bffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x000000001bffffff]
+[    0.000000] Kernel command line: coherent_pool=1M 8250.nr_uarts=1 snd_bcm2835.enable_headphones=0 cgroup_disable=memory snd_bcm2835.enable_hdmi=1 snd_bcm2835.enable_hdmi=0  smsc95xx.macaddr=B8:
+vc_mem.mem_base=0x1ec00000 vc_mem.mem_size=0x20000000  console=ttyS0,115200 console=tty1 root=PARTUUID=25b814e8-02 rootfstype=ext4 fsck.repair=yes rootwait modules-load=dwc2,g_ether console=ttyS0,115200 ds=nocloud;i=rpi-imager-1784572696173 cfg80211.ieee80211_regdom=PL
+[    0.000000] cgroup: Disabling memory control group subsystem
+[    0.000000] Unknown kernel command line parameters "modules-load=dwc2,g_ether ds=nocloud;i=rpi-imager-1784572696173", will be passed to user space.
+[    0.000000] printk: log buffer data + meta data: 131072 + 409600 = 540672 bytes
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes, linear)
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 114688
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] ftrace: allocating 36982 entries in 109 pages
+[    0.000000] ftrace: allocated 109 pages with 5 groups
+[    0.000000] RCU Tasks Rude: Setting shift to 0 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=1.
+[    0.000000] RCU Tasks Trace: Setting shift to 0 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=1.
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000009] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+[    0.000056] clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+[    0.000132] bcm2835: system timer (irq = 27)
+[    0.000793] Console: colour dummy device 80x30
+[    0.000828] printk: legacy console [tty1] enabled
+[    0.001439] Calibrating delay loop... 996.14 BogoMIPS (lpj=4980736)
+[    0.040236] CPU: Testing write buffer coherency: ok
+[    0.040332] pid_max: default: 32768 minimum: 301
+[    0.040519] LSM: initializing lsm=capability
+[    0.040835] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.040899] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.044510] Setting up static identity map for 0x8240 - 0x8278
+[    0.045323] Memory: 158864K/458752K available (10900K kernel code, 1617K rwdata, 3540K rodata, 492K init, 329K bss, 35984K reserved, 262144K cma-reserved)
+[    0.046203] devtmpfs: initialized
+[    0.056331] VFP support v0.3: implementor 41 architecture 1 part 20 variant b rev 5
+[    0.057199] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.057380] posixtimers hash table entries: 512 (order: 0, 2048 bytes, linear)
+[    0.057452] futex hash table entries: 256 (4096 bytes on 1 NUMA nodes, total 4 KiB, linear).
+[    0.074426] pinctrl core: initialized pinctrl subsystem
+[    0.076157] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.078389] DMA: preallocated 1024 KiB pool for atomic coherent allocations
+[    0.082980] audit: initializing netlink subsys (disabled)
+[    0.084309] thermal_sys: Registered thermal governor 'step_wise'
+[    0.084667] hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+[    0.084751] hw-breakpoint: maximum watchpoint size is 4 bytes.
+[    0.085111] Serial: AMBA PL011 UART driver
+[    0.090569] audit: type=2000 audit(0.080:1): state=initialized audit_enabled=0 res=1
+[    0.093076] bcm2835-mbox 2000b880.mailbox: mailbox enabled
+[    0.110608] raspberrypi-firmware soc:firmware: Attached to firmware from 2026-05-21T11:21:57, variant start
+[    0.120636] raspberrypi-firmware soc:firmware: Firmware hash is 288930ab4712b99596f32732664aaaeb881ef1e0
+[    0.135332] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.151908] bcm2835-dma 20007000.dma-controller: DMA legacy API manager, dmachans=0x1
+[    0.154012] SCSI subsystem initialized
+[    0.154445] usbcore: registered new interface driver usbfs
+[    0.154576] usbcore: registered new interface driver hub
+[    0.154688] usbcore: registered new device driver usb
+[    0.155342] pps_core: LinuxPPS API ver. 1 registered
+[    0.155401] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.155468] PTP clock support registered
+[    0.157848] clocksource: Switched to clocksource timer
+[    0.158963] VFS: Disk quotas dquot_6.6.0
+[    0.159095] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    0.198217] NET: Registered PF_INET protocol family
+[    0.198560] IP idents hash table entries: 4096 (order: 3, 32768 bytes, linear)
+[    0.199888] tcp_listen_portaddr_hash hash table entries: 1024 (order: 0, 4096 bytes, linear)
+[    0.199984] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.200039] TCP established hash table entries: 2048 (order: 1, 8192 bytes, linear)
+[    0.200107] TCP bind hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    0.200182] TCP: Hash tables configured (established 2048 bind 2048)
+[    0.200331] UDP hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.200407] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes, linear)
+[    0.200751] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.208937] RPC: Registered named UNIX socket transport module.
+[    0.209016] RPC: Registered udp transport module.
+[    0.209045] RPC: Registered tcp transport module.
+[    0.209070] RPC: Registered tcp-with-tls transport module.
+[    0.209095] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    0.212624] Trying to unpack rootfs image as initramfs...
+[    3.542726] Initialise system trusted keyrings
+[    3.544252] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+[    3.545818] NFS: Registering the id_resolver key type
+[    3.545923] Key type id_resolver registered
+[    3.545956] Key type id_legacy registered
+[    3.546043] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.546086] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    3.547493] Key type asymmetric registered
+[    3.547572] Asymmetric key parser 'x509' registered
+[    3.547726] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 246)
+[    3.547777] io scheduler mq-deadline registered
+[    3.547807] io scheduler kyber registered
+[    3.548026] io scheduler bfq registered
+[    3.550856] pinctrl-bcm2835 20200000.gpio: GPIO_OUT persistence: yes
+[    4.166323] Freeing initrd memory: 13900K
+[    4.168654] ledtrig-cpu: registered to indicate activity on CPUs
+[    4.171029] simple-framebuffer 1eaa9000.framebuffer: framebuffer at 0x1eaa9000, 0x151800 bytes
+[    4.171121] simple-framebuffer 1eaa9000.framebuffer: format=a8r8g8b8, mode=720x480x32, linelength=2880
+[    4.175707] Console: switching to colour frame buffer device 90x30
+[    4.207984] simple-framebuffer 1eaa9000.framebuffer: fb0: simplefb registered!
+[    4.243039] Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+[    4.249376] bcm2835-rng 20104000.rng: hwrng registered
+[    4.252285] vc-mem: phys_addr:0x00000000 mem_base=0x1ec00000 mem_size:0x20000000(512 MiB)
+[    4.276892] brd: module loaded
+[    4.289194] loop: module loaded
+[    4.292925] Loading iSCSI transport class v2.0-870.
+[    4.296979] usbcore: registered new interface driver smsc95xx
+[    4.299420] dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+[    4.302491] usbcore: registered new interface driver usb-storage
+[    4.305320] mousedev: PS/2 mouse device common for all mice
+[    4.310161] sdhci: Secure Digital Host Controller Interface driver
+[    4.312498] sdhci: Copyright(c) Pierre Ossman
+[    4.315156] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.317577] hid: raw HID events driver (C) Jiri Kosina
+[    4.320455] usbcore: registered new interface driver usbhid
+[    4.322890] usbhid: USB HID core driver
+[    4.325576] bcm2835_vchiq 2000b840.mailbox: there is not valid maps for state default
+[    4.334846] armv6-pmu arm-pmu: hw perfevents: no irqs for PMU, sampling events not supported
+[    4.341741] hw perfevents: enabled with armv6_1176 PMU driver, 3 (00000007) counters available
+[    4.348076] Initializing XFRM netlink socket
+[    4.350555] NET: Registered PF_PACKET protocol family
+[    4.352971] Key type dns_resolver registered
+[    4.385273] registered taskstats version 1
+[    4.387766] Loading compiled-in X.509 certificates
+[    4.411782] uart-pl011 20201000.serial: cts_event_workaround enabled
+[    4.414883] 20201000.serial: ttyAMA1 at MMIO 0x20201000 (irq = 81, base_baud = 0) is a PL011 rev2
+[    4.420498] serial serial0: tty port ttyAMA1 registered
+[    4.423903] bcm2835-aux-uart 20215040.serial: there is not valid maps for state default
+[    4.427105] printk: legacy console [ttyS0] disabled
+[    4.430750] 20215040.serial: ttyS0 at MMIO 0x20215040 (irq = 53, base_baud = 50000000) is a 16550
+[    4.435692] printk: legacy console [ttyS0] enabled
+[    5.360500] bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+[    5.372406] bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+[    5.383742] mmc-bcm2835 20300000.mmcnr: mmc_debug:0 mmc_debug2:0
+[    5.392034] mmc-bcm2835 20300000.mmcnr: DMA channel allocated
+[    5.426821] of_cfs_init
+[    5.431814] of_cfs_init: OK
+[    5.437544] clk: Disabling unused clocks
+[    5.445790] PM: genpd: Disabling unused power domains
+[    5.515145] sdhost-bcm2835 20202000.mmc: loaded - DMA enabled (>1)
+[    5.528477] Freeing unused kernel image (initmem) memory: 492K
+[    5.536157] Kernel memory protection not selected by kernel config.
+[    5.545024] Run /init as init process
+[    5.603690] mmc1: new high speed SDIO card at address 0001
+[    5.618951] mmc0: host does not support reading read-only switch, assuming write-enable
+[    5.642492] mmc0: new high speed SDHC card at address 59b4
+[    5.659073] mmcblk0: mmc0:59b4 USD00 14.7 GiB
+[    5.681185]  mmcblk0: p1 p2
+[    5.697750] mmcblk0: mmc0:59b4 USD00 14.7 GiB (quirks 0x40000000)
+Loading, please wait...
+Starting systemd-udevd version 257.9-1~deb13u1+rpi1
+[    9.114504] dwc2 20980000.usb: supply vusb_d not found, using dummy regulator
+[    9.152692] dwc2 20980000.usb: supply vusb_a not found, using dummy regulator
+[    9.308125] dwc2 20980000.usb: EPs: 8, dedicated fifos, 4080 entries in SPRAM
+Begin: Disarming watchdog... ... done.
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... done.
+Begin: Will now check root file system ... fsck from util-linux 2.41
+[/sbin/fsck.ext4 (1) -- /dev/mmcblk0p2] fsck.ext4 -y -C0 /dev/mmcblk0p2 
+e2fsck 1.47.2 (1-Jan-2025)
+rootfs: recovering journal
+rootfs: clean, 74293/926592 files, 603811/3727360 blocks
+done.
+[   10.807405] EXT4-fs (mmcblk0p2): orphan cleanup on readonly fs
+[   10.818308] EXT4-fs (mmcblk0p2): mounted filesystem e9ef4083-101b-46b4-b87d-de84fe1169f8 ro with ordered data mode. Quota mode: none.
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+[   12.431062] systemd[1]: System time advanced to timestamp on /var/lib/systemd/timesync/clock: Mon 2026-07-20 21:08:46 CEST
+[   12.791288] NET: Registered PF_INET6 protocol family
+[   12.800697] Segment Routing with IPv6
+[   12.806241] In-situ OAM (IOAM) with IPv6
+[   12.968284] systemd[1]: systemd 257.9-1~deb13u1+rpi1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[   13.015264] systemd[1]: Detected architecture arm.
+
+Welcome to Raspbian GNU/Linux 13 (trixie)!
+
+[   13.076084] systemd[1]: Hostname set to <emb>.
+[   13.163235] systemd[1]: Using hardware watchdog 'Broadcom BCM2835 Watchdog timer', version 0, device /dev/watchdog0
+[   13.178743] systemd[1]: Watchdog running with a hardware timeout of 1min.
+[   13.909123] zram_generator::config[147]: zram0: system has too much memory (426MB), limit is 0MB, ignoring.
+[   19.475769] systemd[1]: Queued start job for default target multi-user.target.
+[   19.557070] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[  OK  ] Created slice system-getty.slice - Slice /system/getty.
+[   19.598326] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[  OK  ] Created slice system-modprobe.slice - Slice /system/modprobe.
+[   19.633143] systemd[1]: Created slice system-rpi\x2dsetup\x2dloop.slice - Slice /system/rpi-setup-loop.
+[  OK  ] Created slice system-rpi\x2dsetup\…ice - Slice /system/rpi-setup-loop.
+[   19.673175] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[[   19.688119] raspberrypi-power soc:power: sync_state() pending due to 20c00000.v3d
+  OK     19.698252] raspberrypi-power soc:power: sync_state() pending due to 20902000.hdmi
+0m] Created slice system-serial\x2dget…slice - Slice /system/serial-getty.
+[   19.733109] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[  OK  ] Created slice system-systemd\x2dfs…slice - Slice /system/systemd-fsck.
+[   19.773262] systemd[1]: Created slice system-systemd\x2dzram\x2dsetup.slice - Slice /system/systemd-zram-setup.
+[  OK  ] Created slice system-systemd\x2dzr…- Slice /system/systemd-zram-setup.
+[   19.820736] systemd[1]: Created slice user.slice - User and Session Slice.
+[  OK  ] Created slice user.slice - User and Session Slice.
+[   19.848998] systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started systemd-ask-password-conso…equests to Console Directory Watch.
+[   19.888973] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started systemd-ask-password-wall.…d Requests to Wall Directory Watch.
+[   19.930495] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[  OK  ] Set up automount proc-sys-fs-binfm…ormats File System Automount Point.
+[   19.978570] systemd[1]: Expecting device dev-disk-by\x2dpartuuid-25b814e8\x2d01.device - /dev/disk/by-partuuid/25b814e8-01...
+         Expecting device dev-disk-by\x2dpa…dev/disk/by-partuuid/25b814e8-01...
+[   20.018360] systemd[1]: Expecting device dev-ttyS0.device - /dev/ttyS0...
+         Expecting device dev-ttyS0.device - /dev/ttyS0...
+[   20.048303] systemd[1]: Expecting device dev-zram0.device - /dev/zram0...
+         Expecting device dev-zram0.device - /dev/zram0...
+[   20.079173] systemd[1]: Reached target paths.target - Path Units.
+[  OK  ] Reached target paths.target - Path Units.
+[   20.108582] systemd[1]: Reached target remote-fs.target - Remote File Systems.
+[  OK  ] Reached target remote-fs.target - Remote File Systems.
+[   20.138451] systemd[1]: Reached target slices.target - Slice Units.
+[  OK  ] Reached target slices.target - Slice Units.
+[   20.189020] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[  OK  ] Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   20.229654] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[  OK  ] Listening on systemd-initctl.socke…- initctl Compatibility Named Pipe.
+[   20.269742] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[  OK  ] Listening on systemd-journald-dev-…socket - Journal Socket (/dev/log).
+[   20.309818] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[  OK  ] Listening on systemd-journald.socket - Journal Sockets.
+[   20.349909] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[  OK  ] Listening on systemd-udevd-control.socket - udev Control Socket.
+[   20.389341] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[  OK  ] Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   20.430028] systemd[1]: dev-hugepages.mount - Huge Pages File System was skipped because of an unmet condition check (ConditionPathExists=/sys/kernel/mm/hugepages).
+[   20.463887] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+         Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   20.498217] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+         Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[   20.578741] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+         Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   20.636429] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+         Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   20.779851] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+         Starting keyboard-setup.service - Set the console keyboard layout...
+[   20.919443] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+         Starting kmod-static-nodes.service…eate List of Static Device Nodes...
+[   21.109320] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+         Starting modprobe@configfs.service - Load Kernel Module configfs...
+[   21.269371] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+         Starting modprobe@drm.service - Load Kernel Module drm...
+[   21.407138] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+         Starting modprobe@efi_pstore.servi… - Load Kernel Module efi_pstore...
+[   21.679454] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+         Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   21.850596] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+[   22.088934] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67).
+[   22.499506] systemd[1]: Starting systemd-journald.service - Journal Service...
+         Starting systemd-journald.service - Journal Service...
+[   22.809566] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[   22.821232] fuse: init (API version 7.45)
+         Starting systemd-modules-load.service - Load Kernel Modules...
+[   22.979442] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+         Starting systemd-remount-fs.servic…unt Root and Kernel File Systems...
+[   23.169378] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+         Starting systemd-udev-load-credent…Load udev Rules from Credentials...
+[   23.309418] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+         Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   23.711924] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[  OK  ] Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   23.900273] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[  OK  ] Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[   24.036162] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[  OK  ] Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   24.174717] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   24.193301] g_ether gadget.0: HOST MAC 4e
+[   24.201274] g_ether gadget.0: MAC b6:
+[[   24.210778] g_ether gadget.0: Ethernet Gadget, version: Memorial Day 2008
+  OK     24.220654] g_ether gadget.0: g_ether ready
+0m] Mounted sys[   24.229325] systemd-journald[230]: Collecting audit messages is disabled.
+-kernel-tracing.mount - Kernel Trace File System.
+[   24.251464] systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+[   24.268721] EXT4-fs (mmcblk0p2): re-mounted e9ef4083-101b-46b4-b87d-de84fe1169f8 r/w.
+[   24.308116] dwc2 20980000.usb: bound driver g_ether
+[  OK  ] Finished keyboard-setup.service - Set the console keyboard layout.
+[   24.398554] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[  OK  ] Finished kmod-static-nodes.service…Create List of Static Device Nodes.
+[   24.491705] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[   24.535117] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[   24.556084] zram: Added device: zram0
+[  OK  ] Finished modprobe@configfs.service - Load Kernel Module configfs.
+[   24.602353] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[   24.648363] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[  OK  ] Finished modprobe@drm.service - Load Kernel Module drm.
+[   24.692429] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[   24.729982] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[  OK  ] Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[   24.781907] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[   24.820014] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[  OK  ] Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   24.881887] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[  OK  ] Finished systemd-modules-load.service - Load Kernel Modules.
+[   24.920184] systemd[1]: Started systemd-journald.service - Journal Service.
+[  OK  ] Started systemd-journald.service - Journal Service.
+[  OK  ] Finished systemd-remount-fs.servic…mount Root and Kernel File Systems.
+[  OK  ] Finished systemd-udev-load-credent…- Load udev Rules from Credentials.
+         Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+         Mounting sys-kernel-config.mount - Kernel Configuration File System...
+         Starting rpi-resize-swap-file.serv…r-swap-service - resize swapfile...
+         Starting systemd-journal-flush.ser…sh Journal to Persistent Storage...
+         Starting systemd-random-seed.service - Load/Save OS Random Seed...
+         Starting systemd-sysctl.service - Apply Kernel Variables...
+         Starting systemd-tmpfiles-setup-de… Device Nodes in /dev gracefully...
+[  OK  ] Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[  OK  ] Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[  OK  ] Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+[   26.973076] systemd-journald[230]: Received client request to flush runtime journal.
+[  OK  ] Finished systemd-journal-flush.ser…lush Journal to Persistent Storage.
+[  OK  ] Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[  OK  ] Finished systemd-sysctl.service - Apply Kernel Variables.
+[  OK  ] Finished systemd-tmpfiles-setup-de…ic Device Nodes in /dev gracefully.
+         Starting systemd-timesyncd.service - Network Time Synchronization...
+         Starting systemd-tmpfiles-setup-de…eate Static Device Nodes in /dev...
+[  OK  ] Finished systemd-tmpfiles-setup-de…Create Static Device Nodes in /dev.
+[  OK  ] Reached target local-fs-pre.target…Preparation for Local File Systems.
+         Starting systemd-udevd.service - R…ager for Device Events and Files...
+[  OK  ] Finished rpi-resize-swap-file.serv…var-swap-service - resize swapfile.
+         Starting rpi-setup-loop@var-swap.s…oop - set up file on loop device...
+[  OK  ] Started systemd-timesyncd.service - Network Time Synchronization.
+[  OK  ] Reached target time-set.target - System Time Set.
+[  OK  ] Started systemd-udevd.service - Ru…anager for Device Events and Files.
+[  OK  ] Finished rpi-setup-loop@var-swap.s…-loop - set up file on loop device.
+[  OK  ] Reached target usb-gadget.target - Hardware activated USB gadget.
+[  OK  ] Found device dev-zram0.device - /dev/zram0.
+         Starting systemd-zram-setup@zram0.…vice - Create swap on /dev/zram0...
+[  OK  ] Finished systemd-zram-setup@zram0.service - Create swap on /dev/zram0.
+         Activating swap dev-zram0.swap - r… managed swap device (zram+file)...
+[  OK  ] Activated swap dev-zram0.swap - rp…ap managed swap device (zram+file).
+[  OK  ] Reached target swap.target - Swaps.
+         Mounting tmp.mount - Temporary Directory /tmp...
+[  OK  ] Mounted tmp.mount - Temporary Directory /tmp.
+[  OK  ] Found device dev-ttyS0.device - /dev/ttyS0.
+[  OK  ] Found device dev-disk-by\x2dpartuu… /dev/disk/by-partuuid/25b814e8-01.
+         Starting systemd-fsck@dev-disk-by\…dev/disk/by-partuuid/25b814e8-01...
+[  OK  ] Finished systemd-fsck@dev-disk-by\… /dev/disk/by-partuuid/25b814e8-01.
+         Mounting boot-firmware.mount - /boot/firmware...
+[  OK  ] Mounted boot-firmware.mount - /boot/firmware.
+[  OK  ] Reached target local-fs.target - Local File Systems.
+[  OK  ] Listening on systemd-sysext.socket… System Extension Image Management.
+         Starting cloud-init-main.service - Cloud-init: Single Process...
+         Starting console-setup.service - Set console font and keymap...
+         Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+         Starting systemd-tmpfiles-setup.se…ate System Files and Directories...
+[  OK  ] Finished console-setup.service - Set console font and keymap.
+         Mounting proc-sys-fs-binfmt_misc.m…cutable File Formats File System...
+[  OK  ] Mounted proc-sys-fs-binfmt_misc.mo…xecutable File Formats File System.
+[  OK  ] Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[  OK  ] Finished systemd-tmpfiles-setup.se…reate System Files and Directories.
+[  OK  ] Listening on systemd-rfkill.socket…ll Switch Status /dev/rfkill Watch.
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+         Starting modprobe@efi_pstore.servi… - Load Kernel Module efi_pstore...
+[  OK  ] Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[  OK  ] Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+         Starting modprobe@efi_pstore.servi… - Load Kernel Module efi_pstore...
+[  OK  ] Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[  OK  ] Started cloud-init-main.service - Cloud-init: Single Process.
+         Starting cloud-init-local.service …-init: Local Stage (pre-network)...
+[   61.763204] sh[445]: Completed socket interaction for boot stage local
+[  OK  ] Finished cloud-init-local.service …ud-init: Local Stage (pre-network).
+[  OK  ] Reached target network-pre.target - Preparation for Network.
+         Starting cloud-init-network.service - Cloud-init: Network Stage...
+[   63.073536] sh[455]: Completed socket interaction for boot stage network
+[  OK  ] Finished cloud-init-network.service - Cloud-init: Network Stage.
+[  OK  ] Reached target cloud-config.target - Cloud-config availability.
+[  OK  ] Reached target sysinit.target - System Initialization.
+[  OK  ] Started apt-daily.timer - Daily apt download activities.
+[  OK  ] Started apt-daily-upgrade.timer - …y apt upgrade and clean activities.
+[  OK  ] Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[  OK  ] Started e2scrub_all.timer - Period…Metadata Check for All Filesystems.
+[  OK  ] Started fstrim.timer - Discard unused filesystem blocks once a week.
+[  OK  ] Started logrotate.timer - Daily rotation of log files.
+[  OK  ] Started man-db.timer - Daily man-db regeneration.
+[  OK  ] Started rpi-zram-writeback.timer - zram writeback timer.
+[  OK  ] Started systemd-tmpfiles-clean.tim…y Cleanup of Temporary Directories.
+[  OK  ] Reached target timers.target - Timer Units.
+[  OK  ] Listening on avahi-daemon.socket -…DNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on cloud-init-hotplugd.s…t - cloud-init hotplug hook socket.
+[  OK  ] Listening on dbus.socket - D-Bus System Message Bus Socket.
+[  OK  ] Listening on sshd-unix-local.socke…temd-ssh-generator, AF_UNIX Local).
+[  OK  ] Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[  OK  ] Reached target sockets.target - Socket Units.
+[  OK  ] Reached target basic.target - Basic System.
+         Starting alsa-restore.service - Save/Restore Sound Card State...
+         Starting avahi-daemon.service - Avahi mDNS/DNS-SD Stack...
+         Starting bluetooth.service - Bluetooth service...
+[  OK  ] Started cron.service - Regular background program processing daemon.
+         Starting dbus.service - D-Bus System Message Bus...
+         Starting e2scrub_reap.service - Re…ne ext4 Metadata Check Snapshots...
+         Starting rpi-eeprom-update.service… for Raspberry Pi EEPROM updates...
+         Starting sshswitch.service - Turn …or /boot/firmware/ssh is present...
+         Starting systemd-logind.service - User Login Management...
+[  OK  ] Finished alsa-restore.service - Save/Restore Sound Card State.
+[  OK  ] Reached target sound.target - Sound Card.
+[  OK  ] Finished rpi-eeprom-update.service…ck for Raspberry Pi EEPROM updates.
+[  OK  ] Started dbus.service - D-Bus System Message Bus.
+[  OK  ] Finished sshswitch.service - Turn …h or /boot/firmware/ssh is present.
+         Starting NetworkManager.service - Network Manager...
+         Starting wpa_supplicant.service - WPA supplicant...
+[  OK  ] Started avahi-daemon.service - Avahi mDNS/DNS-SD Stack.
+[  OK  ] Finished e2scrub_reap.service - Re…line ext4 Metadata Check Snapshots.
+[  OK  ] Started bluetooth.service - Bluetooth service.
+[  OK  ] Reached target bluetooth.target - Bluetooth Support.
+         Starting systemd-hostnamed.service - Hostname Service...
+[  OK  ] Started wpa_supplicant.service - WPA supplicant.
+[  OK  ] Started systemd-logind.service - User Login Management.
+[  OK  ] Started systemd-hostnamed.service - Hostname Service.
+         Starting NetworkManager-dispatcher…anager Script Dispatcher Service...
+[  OK  ] Started NetworkManager-dispatcher.… Manager Script Dispatcher Service.
+         Starting NetworkManager-dispatcher…anager Script Dispatcher Service...
+[  OK  ] Started NetworkManager.service - Network Manager.
+[  OK  ] Reached target network.target - Network.
+         Starting NetworkManager-wait-onlin…ce - Network Manager Wait Online...
+[  OK  ] Started rpi-usb-gadget-ics.service… auto-switcher (client <-> shared).
+         Starting ssh.service - OpenBSD Secure Shell server...
+         Starting systemd-user-sessions.service - Permit User Sessions...
+[  OK  ] Started NetworkManager-dispatcher.… Manager Script Dispatcher Service.
+[  OK  ] Finished systemd-user-sessions.service - Permit User Sessions.
+[  OK  ] Started getty@tty1.service - Getty on tty1.
+[  OK  ] Started serial-getty@ttyS0.service - Serial Getty on ttyS0.
+[  OK  ] Reached target getty.target - Login Prompts.
+[  OK  ] Started ssh.service - OpenBSD Secure Shell server.
+[  OK  ] Reached target multi-user.target - Multi-User System.
+
+Raspbian GNU/Linux 13 emb ttyS0
+
+My IP address is 127.0.1.1 ::ffff:127.0.1.1
+
+emb login: 
+Raspbian GNU/Linux 13 emb ttyS0
+
+My IP address is 
+
+emb login: [  136.157094] sh[958]: Completed socket interaction for boot stage config
+[  138.259893] sh[963]: Completed socket interaction for boot stage final
+
+
